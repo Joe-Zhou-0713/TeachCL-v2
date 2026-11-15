@@ -50,10 +50,7 @@ def _render_auto_download(record):
         archive.writestr(f"{folder_name}/{text_name}", format_session_text(record))
     zip_bytes = zip_buffer.getvalue()
     zip_name = f"{folder_name}.zip"
-    st.download_button(
-        f"Download {zip_name}", zip_bytes, file_name=zip_name,
-        mime="application/zip", key=f"download:{record['session_id']}:archive",
-    )
+   
     if not st.session_state.get("download_dispatched"):
         encoded_zip = base64.b64encode(zip_bytes).decode("ascii")
         st.components.v1.html(
