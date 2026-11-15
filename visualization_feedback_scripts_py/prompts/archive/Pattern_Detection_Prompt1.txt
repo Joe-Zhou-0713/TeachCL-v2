@@ -1,0 +1,58 @@
+# Task Objective
+You are an expert AI researcher specialized in analyzing chat logs of "Teacher-GenAI co-designing collaborative learning courses." Your task is to analyze the provided chat log based on the following [Teacher Coding Scheme] and [Interaction Pattern Rules].
+
+---
+
+# Step 1: Teacher Behavior Coding Scheme
+Analyze the teacher's utterances sentence-by-sentence or turn-by-turn, and apply the most appropriate code from the table below:
+
+| Code | Code Name | Definition, Description, & Distinction | Examples |
+| :--- | :--- | :--- | :--- |
+| **A1** | Context information sharing | Teacher provides information about the instructional context (subject/level, learners' characteristics, content/collaboration goals, class size, time, constraints) that GenAI can use to ground later suggestions. | "First semester learning sciences students, 30 per cohort, 90-min seminar on CSCL." |
+| **A2** | Design request / task initiation | Teacher asks GenAI to generate or draft a concrete instructional output (lesson plan, activity, script, prompts, roles, assessment). | "Can you make a small group activity that students compare two scaffolding strategies?" |
+| **B1** | Request feedback | Teacher asks GenAI to evaluate or improve an existing design/product after collaboration. | "Can you give feedback on this lesson plan?" |
+| **B2** | Follow-up probing | Teacher asks additional questions to deepen or clarify GenAI feedback. | "Why do you think group work would work better here?" |
+| **B3** | Challenging | Teacher questions, critiques, or challenges GenAI-generated suggestions or ideas. | "I don't think this aligns with my lesson objectives." |
+| **B4** | Evaluate GenAI feedback | Teacher evaluates usefulness, relevance, or quality of GenAI response. | "This suggestion is useful, but it is too advanced for my students." |
+| **B5** | Justification | Providing a reason or an underlying goal for a request. | "Let's update it in a more interactive way to make students engage more. That would make the learning process collaborative." |
+| **C1** | Regulation for collaboration | The teacher initiates topic arrangements, topic shifts, and in-depth discussions with GenAI from the meta level for collaboration, monitors the rationality, comprehensiveness, and practicability of its sorted content, directs the learning processes, and integrates global perspectives. | "Let's switch to Co-design (User–GenAI Hybrid, Activity-Centered, Role-Sensitive)... Let's start with the knowledge transfer, but I'm also interested in co-design." |
+| **D2** | Off-task | Messages irrelevant to the given task of designing a GenAI-supported collaborative learning course plan and the background knowledge, which trigger AI's function introduction response. | "Please give some recommendations for a trip to Italy in the region of Bergamo." |
+
+---
+
+# Step 2: Interaction Pattern Classification Rules
+After completing the coding process, calculate the frequency and sequence of the codes to determine which [Interaction Pattern] best describes the session. Then, identify the corresponding [Adaptive Scaffolding] strategy and output response.
+
+### Pattern 1: Critical Reasoning Synergy
+* **Classification Criteria**: High frequency of **B2 (Probing)**, **B3 (Challenging)**, **B5 (Justification)**, and **C1 (Regulation)**. The teacher engages in an iterative, critical dialogue, questioning dimensions and requiring alignment with frameworks (e.g., CoMPAS) while strongly maintaining pedagogical agency.
+* **Adaptive Support Goal**: Maintain pedagogical agency. Prevent design from remaining superficial and ensure the coding scheme guidance has a rigorous methodological foundation.
+* **Adaptive Scaffolding Strategy (Metacognitive Prompts)**: When the co-design reaches a complex stage, AI asks: "Does the current definition of 'Cognitive Interaction' provide enough operational clarity for students during a 10-min role play?"
+
+### Pattern 2: Cognitive Offloading (Uncritical Reliance)
+* **Classification Criteria**: High frequency of **A2 (Design Request)** paired with an almost complete absence of **B3 (Challenging)** or **B4 (Evaluation)**. The teacher exhibits passive participation, accepting AI-generated instructional designs wholesale without verifying or applying frameworks.
+* **Adaptive Support Goal**: Trigger critical scrutiny. Break the passive acceptance of AI output and force the teacher into deep cognitive processing.
+* **Adaptive Scaffolding Strategy (Refusal/Reflection Link)**: AI refuses to generate a full scheme directly. Instead, it provides the network logics information of collaboration to trigger reflection.
+
+### Pattern 3: Goal Misalignment (Design Stalemate)
+* **Classification Criteria**: Repetitive occurrences of **B3 (Challenging)**, **B5 (Justification)**, or **C1 (Regulation)** on the same unresolved topic. A conflict emerges where the teacher prioritizes classroom practical feasibility while the AI generates overly complex academic definitions, leading to a deadlock.
+* **Adaptive Support Goal**: Foster design consensus. Mediate the conflict between practical demands and theoretical output to move the project forward.
+* **Adaptive Scaffolding Strategy (Consensus Coordination)**: AI generates a comparison form weighing 'Theoretical Rigor' against 'Classroom Usability' and suggests: "We could use a simplified version for the role play and add rigor in Activity 2 via group discussion."
+
+### Pattern 4: Superficial / Coordinative-Heavy Interaction
+* **Classification Criteria**: Dialogue heavily concentrated on **A1 (Information Sharing)**, **D2 (Off-task)**, or formatting/proofreading logistics. The interaction focuses entirely on coordinative/administrative steps (e.g., code validation) rather than discussing the instructional logic connecting activities to knowledge.
+* **Adaptive Support Goal**: Cognitive focus shift. Transfer the co-design focus from superficial information to the pedagogical core of the activity.
+* **Adaptive Scaffolding Strategy (Procedural Domain Guidance)**: After completing formatting tasks, AI prompts: "Formatting is done. Now, how should we design the scaffolding to ensure students accurately identify specific cognitive interactions category after the role play?"
+
+---
+
+# Output Format Requirements
+Please strictly provide the analysis results in the following format:
+
+1. **Turn Coding Table**: A breakdown showing your assigned code for each turn in the chat log.
+2. **Code Frequency & Distribution**: A brief statistical analysis of code frequencies and dominant interaction traits (e.g., "Highly dominant in A2, missing B3").
+3. **Pattern Classification & Rationale**: Clear identification of the interaction pattern, justified by the code frequency data.
+4. **Adaptive Scaffolding Recommendation**: Based on the pattern, provide the specific AI intervention goal and an example response text.
+
+---
+
+**[Paste Chat Log Below]**
