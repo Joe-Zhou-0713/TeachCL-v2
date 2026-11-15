@@ -8,7 +8,7 @@ from llm_client import call_openai
 # Locate the prompts folder relative to this Python file.
 BASE_DIR = Path(__file__).resolve().parent
 FEEDBACK_PROMPT_PATH = (
-    BASE_DIR / "prompts" / "Scaffolding Feedback.txt"
+    BASE_DIR / "prompts" / "Scaffolding_Feedback.txt"
 )
 
 
